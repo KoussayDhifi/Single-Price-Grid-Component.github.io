@@ -1,0 +1,175 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+}
+
+main {
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Karla', sans-serif;
+    border-radius: 15px;
+    overflow: hidden;
+
+    
+}
+
+
+.section1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    padding: 25px;
+    height: 50%;
+}
+
+.section1 h1 {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+    font-size: 25px;
+
+}
+.section1 h2 {
+    font-weight: bold;
+    color:hsl(71, 73%, 54%);
+    font-size: 20px;
+}
+.section1 p {
+    color:hsl(218, 22%, 67%);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+main .section2 {
+    display: flex;
+    
+    
+}
+
+.section2 .payment {
+    background-color: hsl(179, 62%, 43%);
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:2.2rem;
+}
+
+.section2 .payment .mon {
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section2 .payment .price {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.section2 .payment .price .dollar {
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.section2 .payment .price .pm {
+    color:hsl(204, 43%, 93%);
+    font-size: 20px;
+}
+.section2 .payment .access {
+    color:white;
+    font-size: 18px;
+}
+
+button {
+    background-color: hsl(71, 73%, 54%);
+    border:none;
+    height: 50px;
+    border-radius: 5px;
+    color:white;
+    font-size: large;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    animation-name: hoverButton;
+    animation-duration: 0.5s;
+    color:hsl(71, 73%, 54%);
+    background-color: white;
+}
+
+
+.section2 .about {
+    background-color: hsl(218, 22%, 67%);
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: 25px;
+    width: 50%;
+}
+.section2 .about h3 {
+    color:white;
+    font-size: 20px;
+}
+.section2 .about p {
+    color:hsl(204, 43%, 93%);
+    font-size:15px;
+    width: 70%;
+    line-height: 2;
+}
+
+
+/*Animations*/
+
+@keyframes hoverButton {
+    from {
+        background-color: hsl(71, 73%, 54%);
+        color:white
+    }
+
+    to {
+        background-color: white;
+        color:hsl(71, 73%, 54%);
+    }
+}
+
+
+@media (max-width:700px) {
+    main {
+        width: 400px;
+        border-radius: 5px;
+        height: 900px;
+    }
+    .section1 {
+       justify-content: space-evenly;
+    }
+
+    .section2 {
+        flex-direction: column;
+        width: 400px;
+    }
+    .section2 .payment {
+        
+        width: 100%;
+    }
+    button {
+        width: 85%;
+    }
+
+    .section2 .about {
+        width: 100%;
+    }
+    
+}
